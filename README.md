@@ -23,7 +23,7 @@ This is a no-code Streamlit web app for automating machine learning workflows. Y
 
 ```bash
 pip install -r requirements.txt
-streamlit run app_with_stats.py
+streamlit run app.py
 ```
 
 ## 🌐 Deploy on Streamlit Cloud
@@ -31,4 +31,9 @@ streamlit run app_with_stats.py
 1. Push this repo to GitHub
 2. Visit [streamlit.io/cloud](https://streamlit.io/cloud)
 3. Click **New App**
-4. Select your repo and app file: `app_with_stats.py`
+4. Select your repo and app file: `app.py`
+
+## Streamlit URL for running
+
+https://agarwalkul-mlgui.streamlit.app/
+
