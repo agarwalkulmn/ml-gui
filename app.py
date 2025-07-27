@@ -22,9 +22,9 @@ from sklearn.metrics import (
 from sklearn.decomposition import PCA
 
 st.set_page_config(layout="wide")
-st.title("Streamlit AutoML with Full EDA and ML Training")
+st.title("AutoML with Full EDA and ML Training")
 
-uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
+uploaded_file = st.file_uploader("Upload your CSV file with column headers", type=["csv"])
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
@@ -111,7 +111,7 @@ if uploaded_file is not None:
 
     # ============================== MODEL TRAINING SECTION ============================== #
     elif page == "Model Training":
-        st.header("Model Training and Statistical Summaries")
+        st.header("Model Training and Summaries")
         y_col = st.selectbox("Select Target Variable (Y)", df.columns)
         x_cols = st.multiselect("Select Feature Variables (X)", [col for col in df.columns if col != y_col])
         normalize = st.sidebar.checkbox("Normalize numeric features", value=True)
